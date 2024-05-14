@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marybank - Criar conta 2</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <ul class="header__lista">
+            <li class="header__item-logo">
+            <a href="#"><img src="../assets/Logo-marca.png" alt="MaryBank Logo"></a> 
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="formulario">
+            <div class="formulario__container">
+                <img src="../assets/status-2.png" alt="Etapa um de três" class="formulario__etapas">
+                <h2 class="formulario__titulo-texto">Reconhecimento facial</h2>
+                <p class="formulario__texto">Clique no quadro abaixo<br> para capturarmos uma imagem sua!</p>
+
+                <img src="../assets/reconhecimento.png" alt="Rosto com olhos e um sorriso dentro de um enquadramento"
+                    data-video-botao class="formulario__imagem">
+
+                <div class="formulario__camera" data-camera>
+                    <video width="320" height="240" autoplay data-video></video>
+                    <button class='camera__botao' data-tirar-foto>Tirar foto</button>
+                </div>
+
+                <div class="formulario__mensagem" data-mensagem>
+                    <canvas width="320" height="240" data-video-canvas></canvas>
+                    <img src="../assets/icone-check.png" alt="Ícone de validação" class="formulario__imagem">
+                    <p>Prontinho, imagem capturada!</p>
+
+                    <a href="#" class="formulario__botao formulario__botao--ancora" data-enviar>Quero abrir minha
+                        conta!</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer__container-uls">
+            <div class="container footer__empresa">
+                <h2>MaryBank</h2>
+                <ul class="footer__list">
+                    <li>Sobre</li>
+                    <li>Perguntas frequentes</li>
+                    <li>Carreira</li>
+                </ul>
+            </div>
+            <div class="container footer__servicos">
+                <h2>Serviços</h2>
+                <ul class="footer__list">
+                    <li>Conta corrente</li>
+                    <li>Conta PJ</li>
+                    <li>Cartão de crédito</li>
+                </ul>
+            </div>
+            <div class="container footer__contatos">
+                <h2>Contatos</h2>
+                <ul class="footer__list">
+                    <li>0800 004 250 08</li>
+                    <li>meajuda@marybank.com.br</li>
+                    <li>ouvidoria@marybank.com.br</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <a href="#"><img src="../assets/Logo-marca.png" alt="Logo-marca marybank"></a>
+            <hr>
+            <p>© Maria Eduarda Nery</p>
+
+        </div>
+    </footer>
+    <script src="../js/camera.js" type="module"></script>
+
+<body>
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    overflow-x: hidden;
+}
+
+:root {
+    font: {
+        size: 62.5%;
+    }
+}
+
+body {
+    min-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin centralizar($direction, $content){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $content;
+}
+
+@mixin fonte($size, $weight){
+    font: {
+        size: $size; 
+        family: sans-serif;
+        weight: $weight;
+    }
+}

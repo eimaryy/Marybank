@@ -1,0 +1,61 @@
+main{
+    padding: 2rem;
+    margin: 5rem 0;
+    @include centralizar(column, center);    
+
+    .main__crieConta{
+        padding: 2rem;
+        border: solid 1px;
+        border-radius: 10px;
+        box-shadow: 5px 10px $cor__preto;
+                
+        h2{
+            @include fonte(2rem, 600);
+            span{
+                color: $cor__red;
+            }
+        }
+        .main__CC-container-text{
+            padding: 2rem;
+            @include centralizar(row, center);
+            gap: 2rem;
+            p{
+                @include fonte(1.8rem, 500);
+            }
+            a{
+                color: $cor__branco;
+                @include fonte(1.5rem, bolder);
+                background-color: $cor__red;
+                padding: 1.5rem;
+                border-radius: 5px;
+                &:hover{
+                    background-color: $cor__red-light;
+                }
+            }
+        }
+    }
+    .perfil__container{
+        padding: 2rem;
+        @include centralizar(column,center);
+
+        .perfil__img{
+            border-radius: 100%;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            margin: 1rem 0;
+        }
+
+        .perfil__nome{
+            @include fonte(2.5rem, 700);
+            margin: 2rem;
+        }
+
+        p{
+            @include fonte(1.8rem, 500);
+            margin-bottom: 1rem;
+            
+        }
+
+    }
+}

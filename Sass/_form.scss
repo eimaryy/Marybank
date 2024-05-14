@@ -1,0 +1,121 @@
+.formulario{
+    width: 100%;
+    @include centralizar(column, center);
+
+    .formulario__container{
+        @include centralizar(column, center);
+
+        img{
+            margin: 0 0 2rem 0;
+        }
+        h2{
+            @include fonte(2.5rem, bolder);
+            text-align: center;
+            padding: 1rem;
+        }
+        .formulario__texto{
+            @include fonte(2rem, 400);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+    }
+    .formulario__principal{
+        @include centralizar(column, center);
+        margin-top: 3rem;
+
+        .formulario__campo{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            border: none;
+            width: 80%;
+            .campo__etiqueta{
+                text-align: start;
+                line-height: 20px;
+                padding: 0.5rem 0;
+                @include fonte(1.4rem, 500);
+            }
+            .campo__escrita{
+                display: block;
+                border: 2px solid $cor__azulOpaco;
+                border-radius: 20px;
+                width: 100%;
+                padding: 1rem;
+            }
+            .campo__escrita--menor{
+                width: 50%;
+            }
+            .mensagem-erro {
+                color: $cor__red;
+                @include fonte(1.4rem, bolder);
+            }
+        }
+
+        .formulario__termos{
+            display: flex; 
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            gap: 0.5rem;
+            border: none;
+           
+            .termos__input{
+                width: 30px;
+                height: auto;
+            }
+            
+            .termos__texto{
+                @include fonte(1.4rem, 500);
+            }
+            
+        }
+        
+    }
+    .formulario__botao, .camera__botao {
+        background-color: $cor__red;
+        margin: 2em auto;
+        display: block;
+        border: none;
+        padding: 1em 2em;
+        border-radius: 30px;
+        @include fonte(18px, 600);
+        line-height: 22px;
+        color: $cor__branco;
+        cursor: pointer;
+        transition: background-color 1s;
+        &:hover{
+            background-color: $cor__red-light;
+        }
+    }
+    .formulario__camera{
+        display: none;
+    }
+    .formulario__mensagem{
+        @include centralizar (column, center);
+        @include fonte(2rem, 500);
+        display: none;
+        
+        .formulario__imagem{
+            margin: 2rem 0;
+        }
+    }
+    .formulario__texto-secundario{
+        padding: 1rem;
+        @include fonte (2rem, 500);
+    }
+    
+}
+@media screen and (min-width:500px) {
+    .formulario{
+        
+        .formulario__principal{
+            
+            .formulario__termos{
+                width: 70%;
+
+            }
+        }
+
+    }
+
+}

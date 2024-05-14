@@ -1,0 +1,40 @@
+header{
+    width: 100vw;
+    padding: 2rem;
+
+    .header__lista{
+        @include centralizar(row, space-between);
+
+        .header__item{
+            background-color: $cor__red;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.2s;
+            &:hover{
+                background-color: $cor__red-light;
+            }
+            
+            .header__item-btn{
+                @include fonte(1.5rem, bolder);
+                color: $cor__branco;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:800px) {
+    header{
+        padding: 2rem 15rem;
+
+        .header__lista{
+            .header__item{
+                padding: 1.5rem;
+            
+                .header__item-btn{
+                    @include fonte(2rem, bolder);
+                }
+            }
+        }
+    }
+}

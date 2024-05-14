@@ -1,0 +1,66 @@
+footer{
+    padding: 2rem;
+    @include centralizar(column, center);
+    background-color: $cor__preto;
+
+    .footer__container-uls{
+        @include centralizar(column,center);
+        width: 100%;
+        margin: 4rem 0;
+
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: start;
+            width: 70%;  
+            padding: 0.5rem; 
+
+            h2{
+                @include fonte(2rem, bolder);
+                color: $cor__branco;
+                padding: 0.5rem;
+            }
+            .footer__list{
+                padding: 0.8rem;
+                @include fonte(1.7rem, 400);
+                color: $cor__branco;
+
+                li{
+                    margin: 0.5rem;
+                    cursor: pointer;
+                    &:hover{
+                        color: $cor__red-light;
+                    }
+                }
+            }
+        } 
+    }
+    .footer__copyright{
+        @include centralizar(column,center);
+        a{
+            img{
+            padding: 2rem;
+            }
+        }
+        hr{
+            width: 100%;
+        }
+        p{
+            padding: 2rem;
+            color:$cor__branco;
+        }
+    }
+}
+@media screen and (min-width:500px) {
+   footer{
+    padding: 3rem;
+        .footer__container-uls{
+            @include centralizar(row,center);
+            width: 50%;  
+            .container{
+                padding: 0.5rem; 
+            }
+        }
+    }
+}
